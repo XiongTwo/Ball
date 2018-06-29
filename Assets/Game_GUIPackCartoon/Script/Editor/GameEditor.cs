@@ -68,6 +68,10 @@ public class GameEditor : EditorWindow {
         {
             PlayerPrefs.DeleteAll();
         }
+        if (GUILayout.Button("CaptureScreenshot"))
+        {
+            Application.CaptureScreenshot(Random.Range(1,1000)+".png");
+        }
         if (GUILayout.Button("Test"))
         {
             Wall[] Wall = GameObject.FindObjectsOfType<Wall>();
